@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PixelMinePackShadow_1
   m_EditorClassIdentifier: 
   m_Sprite: {fileID: 7916469482167852431, guid: 05952eb9735e2ca448273b630ceda48c, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.57924527, b: 0.57924527, a: 1}
   m_Transform:
     e00: 1
     e01: 0
