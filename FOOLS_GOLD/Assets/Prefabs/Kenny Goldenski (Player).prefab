@@ -12,7 +12,8 @@ GameObject:
   - component: {fileID: 1666370725139021246}
   - component: {fileID: 1666370725139021247}
   - component: {fileID: 3755289503497198726}
-  - component: {fileID: 3111776350293763681}
+  - component: {fileID: 617635695}
+  - component: {fileID: 7984024513676722710}
   m_Layer: 0
   m_Name: Kenny Goldenski (Player)
   m_TagString: Untagged
@@ -124,8 +125,23 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!60 &3111776350293763681
+  m_Constraints: 4
+--- !u!114 &617635695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666370725139021216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eaf01907663d844baa912939c4d8d71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 3755289503497198726}
+  animator: {fileID: 1666370725139021246}
+--- !u!60 &7984024513676722710
 PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
