@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 617635698}
   - component: {fileID: 617635701}
   m_Layer: 7
-  m_Name: Kenny Goldenski (Player)
+  m_Name: Kenny Goldinski (Player)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

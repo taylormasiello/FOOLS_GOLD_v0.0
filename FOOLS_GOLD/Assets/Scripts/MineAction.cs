@@ -19,12 +19,4 @@ public class MineAction : MonoBehaviour
 
         
     }
-
-    //void OnCollisionExit2D(Collision2D mining) // placeholder, prob won't need
-    //{
-    //    if (capsuleCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
-    //    {
-    //        Debug.Log("Kenny is finished mining");
-    //    }        
-    //}
 }

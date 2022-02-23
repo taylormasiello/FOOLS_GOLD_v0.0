@@ -14,6 +14,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         CharMovement();
+        EscApp();
+        
     }
 
     void FixedUpdate()
@@ -29,5 +31,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
+    }
+
+    void EscApp()
+    {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
 }

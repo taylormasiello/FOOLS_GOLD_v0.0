@@ -5,17 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class TitleMenu : MonoBehaviour
 {
-    public void Play()
+    private void Update()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        EscApp();
     }
 
-    public void Quit()
+    public void PlayBtn()
+    {
+        SceneManager.LoadScene("Cave");
+
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load next scene
+    }
+
+    public void QuitBtn()
     {
         Application.Quit();
     }
 
-    public void EscApp()
+    void EscApp()
     {
         if (Input.GetKey("escape"))
         {
