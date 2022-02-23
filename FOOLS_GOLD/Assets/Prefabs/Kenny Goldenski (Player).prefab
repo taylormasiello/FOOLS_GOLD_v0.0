@@ -138,9 +138,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf01907663d844baa912939c4d8d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 7
+  moveSpeed: 8.5
   rb: {fileID: 3755289503497198726}
   animator: {fileID: 1666370725139021246}
+  capsuleCollider: {fileID: 617635698}
 --- !u!70 &617635698
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
