@@ -44,11 +44,11 @@ TagManager:
   - name: Background
     uniqueID: 4100566873
     locked: 0
-  - name: Rocks
-    uniqueID: 481688001
-    locked: 0
   - name: Walls
     uniqueID: 3626915653
+    locked: 0
+  - name: Rocks
+    uniqueID: 481688001
     locked: 0
   - name: Player
     uniqueID: 598017155

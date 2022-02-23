@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1666370725139021247}
   - component: {fileID: 3755289503497198726}
   - component: {fileID: 617635695}
-  - component: {fileID: 7984024513676722710}
+  - component: {fileID: 617635698}
   m_Layer: 0
   m_Name: Kenny Goldenski (Player)
   m_TagString: Untagged
@@ -138,11 +138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf01907663d844baa912939c4d8d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 7
   rb: {fileID: 3755289503497198726}
   animator: {fileID: 1666370725139021246}
---- !u!60 &7984024513676722710
-PolygonCollider2D:
+--- !u!70 &617635698
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -154,37 +154,6 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4, y: 4}
-    newSize: {x: 4, y: 4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.296875, y: -0.203125}
-      - {x: 0.46875, y: 0}
-      - {x: 0.578125, y: 0.015625}
-      - {x: 0.65625, y: 0.09375}
-      - {x: 0.65625, y: 0.265625}
-      - {x: 0.421875, y: 0.40625}
-      - {x: 0.359375, y: 0.515625}
-      - {x: 0.203125, y: 0.65625}
-      - {x: -0.25, y: 0.65625}
-      - {x: -0.296875, y: 0.640625}
-      - {x: -0.421875, y: 0.515625}
-      - {x: -0.5625, y: 0.3125}
-      - {x: -0.71875, y: 0.28125}
-      - {x: -0.71875, y: 0.09375}
-      - {x: -0.484375, y: -0.140625}
-      - {x: -0.390625, y: -0.296875}
-      - {x: -0.34375, y: -0.28125}
-      - {x: -0.34375, y: -0.5625}
-      - {x: -0.3125, y: -0.59375}
-      - {x: 0.203125, y: -0.59375}
-      - {x: 0.21875, y: -0.5625}
-      - {x: 0.296875, y: -0.328125}
+  m_Offset: {x: -0.036012232, y: 0.025700092}
+  m_Size: {x: 0.6501404, y: 1.1264277}
+  m_Direction: 0
