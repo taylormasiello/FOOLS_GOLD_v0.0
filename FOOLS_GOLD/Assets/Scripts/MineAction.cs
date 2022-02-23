@@ -9,7 +9,7 @@ public class MineAction : MonoBehaviour
         Debug.Log("Kenny is trying to mine");
     }
 
-    void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision) // placeholder, might not need
     {
         Debug.Log("Kenny is finished mining");
     }
