@@ -7,14 +7,14 @@ using UnityEngine.Events;
 
 public class MiningAction : MonoBehaviour
 {
-
+    [SerializeField] GameObject gameCursor;
     [SerializeField] Button backpackBtn;
 
     [SerializeField] Texture2D miningCursor;
     [SerializeField] Texture2D searchingCursor;
 
     [SerializeField] CapsuleCollider2D playerCollider;
-    //[SerializeField] CompositeCollider2D rockCollider;
+    [SerializeField] CompositeCollider2D rockCollider;
 
 
     void Start()
@@ -37,7 +37,7 @@ public class MiningAction : MonoBehaviour
     void EquipPickaxe()
     {
         SetMiningCursor(miningCursor);
-        
+        /*gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor)*/;
     }
 
     void OnCollisionEnter2D(Collision2D collision) 
@@ -48,21 +48,9 @@ public class MiningAction : MonoBehaviour
         }
         else
         {
-            Debug.Log("Kenny is touching rock");
+            Debug.Log("Kenny is trying to mine");
         }
     }
-
-    //void OnMouseOver()
-    //{
-    //    Debug.Log("hovering over rock?");    
-    //}
-
-    //void OnMouseExit()
-    //{
-    //    Debug.Log("not hovernig rock?");
-    //}
-
-
 
 
 
