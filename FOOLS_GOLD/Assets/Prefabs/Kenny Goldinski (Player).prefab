@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 3755289503497198726}
   - component: {fileID: 617635695}
   - component: {fileID: 617635698}
-  - component: {fileID: 958102269}
   m_Layer: 7
   m_Name: Kenny Goldinski (Player)
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -158,22 +157,3 @@ CapsuleCollider2D:
   m_Offset: {x: -0.036012232, y: -0.13901067}
   m_Size: {x: 0.6501404, y: 0.79700613}
   m_Direction: 0
---- !u!114 &958102269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666370725139021216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c880d1da8c208944183024010b51cfc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameCursor: {fileID: 0}
-  backpack: {fileID: 0}
-  miningCursor: {fileID: 2800000, guid: 9a8884e26e5952340b63c2047fb4d91c, type: 3}
-  searchingCursor: {fileID: 2800000, guid: a8b26c47ffc29d5499fe28565e5923c4, type: 3}
-  playerCollider: {fileID: 617635698}
-  rockCollider: {fileID: 0}
-  backpackCollider: {fileID: 0}
