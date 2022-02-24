@@ -48,6 +48,15 @@ public class TestTrial : MonoBehaviour
         TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);
         TileBase collisionTile2 = rockTilemap.GetTile(collisionCellPos2);
 
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+        {
+            return;
+        }
+        else if (contactPointsList != null)
+        {
+            Debug.Log("Kenny is mining");
+        }
+
 
 
         //foreach (var contact in playToRockContacts)
@@ -60,6 +69,31 @@ public class TestTrial : MonoBehaviour
 
         //tilemapGrid.WorldToCell(playToRockContacts);
         //rockTilemap.GetInstantiatedObject();
+    }
+
+    private void OnCollisionExit2D(Collision2D playerToMine)
+    {
+        Grid rockTileGrid = rockTilemap.layoutGrid;
+        playerToMine.GetContacts(playToRockContacts);
+        List<ContactPoint2D> contactPointsList = new List<ContactPoint2D>(playToRockContacts);
+
+        ContactPoint2D collsionPt1 = contactPointsList[0];
+        ContactPoint2D collisionPt2 = contactPointsList[1];
+
+        Vector3Int collisionCellPos1 = rockTileGrid.WorldToCell(collsionPt1.point);
+        Vector3Int collisionCellPos2 = rockTileGrid.WorldToCell(collisionPt2.point);
+
+        TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);
+        TileBase collisionTile2 = rockTilemap.GetTile(collisionCellPos2);
+
+        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+        {
+            return;
+        }
+        else if (contactPointsList != null)
+        {
+            Debug.Log("Kenny is finished mining");
+        }
     }
 
     void Pickaxe()

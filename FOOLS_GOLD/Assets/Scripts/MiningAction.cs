@@ -28,17 +28,17 @@ public class MiningAction : MonoBehaviour
         gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
-        {
-            return;
-        }
-        else
-        {
-            Debug.Log("kenny smacks rocks");
-        }
-    }
+    //void OnCollisionEnter2D(Collision2D collision)
+    //{
+    //    if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+    //    {
+    //        return;
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("kenny smacks rocks");
+    //    }
+    //}
 
 
 
