@@ -8,7 +8,6 @@ public class GameCursor : MonoBehaviour
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
 
-    //public int btnClickCounter = 0;
     public bool isPickaxe;
 
     void Start()
