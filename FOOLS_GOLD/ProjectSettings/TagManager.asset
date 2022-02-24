@@ -53,3 +53,6 @@ TagManager:
   - name: Player
     uniqueID: 598017155
     locked: 0
+  - name: Cursor
+    uniqueID: 2259253209
+    locked: 0
