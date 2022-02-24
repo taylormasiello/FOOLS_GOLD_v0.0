@@ -15,11 +15,22 @@ public class MiningAction : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] CapsuleCollider2D playerCollider;
 
+    [SerializeField] Texture2D testCursor;
+
     //Collision2D playerToMine;
     ContactPoint2D[] playToRockContacts = new ContactPoint2D[2];
 
-    //Kenny goes to mine
-    void OnCollisionEnter2D(Collision2D playerToMine)
+    bool CanMineThisRock(Vector3 pos1, Vector3 pos2, Vector3 comp)
+    {
+        return System.Math.Abs(pos1.x - pos2.x) <= comp.x && System.Math.Abs(pos1.y - pos2.y) <= comp.y;
+    }
+
+    bool CantMineThisRock(Vector3 pos1, Vector3 pos2, Vector3 comp)
+    {
+        return System.Math.Abs(pos1.x - pos2.x) <= comp.x && System.Math.Abs(pos1.y - pos2.y) <= comp.y;
+    }
+
+    void OnCollisionEnter2D(Collision2D playerToMine)   //Kenny goes to mine
     {
         //makes grid from rocktilemap
         Grid rockTileGrid = rockTilemap.layoutGrid;
@@ -29,15 +40,19 @@ public class MiningAction : MonoBehaviour
         List<ContactPoint2D> contactPointsList = new List<ContactPoint2D>(playToRockContacts);
 
         //stores both contactPoints from array into variables
-        ContactPoint2D collsionPt1 = contactPointsList[0];
-        ContactPoint2D collisionPt2 = contactPointsList[1];
+        ContactPoint2D collsionPt1 = contactPointsList[0];    // I think the first one is the rock
+        ContactPoint2D collisionPt2 = contactPointsList[1];   // i think this one is kenny
 
         //get cell coordiantes in which collision points are; converts world position to cell position
         Vector3Int collisionCellPos1 = rockTileGrid.WorldToCell(collsionPt1.point);
         Vector3Int collisionCellPos2 = rockTileGrid.WorldToCell(collisionPt2.point);
 
+        Vector3 collisionVec3Pos1 = rockTileGrid.WorldToCell(collsionPt1.point);
+        Vector3 collisionVec3Pos2 = rockTileGrid.WorldToCell(collisionPt2.point);
+        Vector3 maxOffset = new Vector3(2f, 2f, 2f);
+
         //gets TileBase from collision tile
-        TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);
+        TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);   //rock tile kenny collide w/?
         TileBase collisionTile2 = rockTilemap.GetTile(collisionCellPos2);
 
         if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
@@ -46,16 +61,33 @@ public class MiningAction : MonoBehaviour
         }
         else if (contactPointsList != null)
         {
-            Debug.Log("Kenny is mining");
+            //Debug.Log("Kenny is mining");
             foreach (var contact in playToRockContacts)
             {
                 Debug.Log(contact.point);
             }
         }
+
+        if(CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
+        {
+            Debug.Log("kenny can mine this rock");
+            if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
+            {
+                UnityEngine.Cursor.SetCursor(testCursor, Vector2.zero, CursorMode.Auto);
+                
+            }
+        }
+
+        
+
+            //do
+            //{
+            //    Debug.Log(Input.GetMouseButtonDown(0));
+            //} while (playerToMine.collider.tag == "Rock" && contactPointsList != null);
     }
 
-    //kenny is finished mining
-    void OnCollisionExit2D(Collision2D playerToMine)
+
+    void OnCollisionExit2D(Collision2D playerToMine)    //kenny is finished mining
     {
         Grid rockTileGrid = rockTilemap.layoutGrid;
         playerToMine.GetContacts(playToRockContacts);
@@ -63,6 +95,10 @@ public class MiningAction : MonoBehaviour
 
         ContactPoint2D collsionPt1 = contactPointsList[0];
         ContactPoint2D collisionPt2 = contactPointsList[1];
+
+        Vector3 collisionVec3Pos1 = rockTileGrid.WorldToCell(collsionPt1.point);
+        Vector3 collisionVec3Pos2 = rockTileGrid.WorldToCell(collisionPt2.point);
+        Vector3 maxOffset = new Vector3(2f, 2f, 2f);
 
         Vector3Int collisionCellPos1 = rockTileGrid.WorldToCell(collsionPt1.point);
         Vector3Int collisionCellPos2 = rockTileGrid.WorldToCell(collisionPt2.point);
@@ -77,7 +113,18 @@ public class MiningAction : MonoBehaviour
         }
         else if (contactPointsList != null)
         {
-            Debug.Log("Kenny is finished mining");
+            //Debug.Log("Kenny is finished mining");
+        }
+
+        if (CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
+        {
+            Debug.Log("kenny can no loger mine this rock");
         }
     }
+
+
+
+
+
+
 }
