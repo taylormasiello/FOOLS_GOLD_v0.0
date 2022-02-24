@@ -4,18 +4,6 @@ using UnityEngine;
 
 public class GameCursor : MonoBehaviour
 {
-<<<<<<< HEAD
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-=======
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
 
@@ -37,6 +25,5 @@ public class GameCursor : MonoBehaviour
     public void SetMiningCursor(Texture2D texture)
     {
         Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
->>>>>>> parent of 034aeac (cleaned up code)
     }
 }
