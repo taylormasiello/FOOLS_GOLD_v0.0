@@ -6,7 +6,7 @@ public class MenuCursor : MonoBehaviour
 {
     [SerializeField] Texture2D menuCursor;
 
-    private void Start()
+    void Start()
     {
         Cursor.SetCursor(menuCursor, Vector2.zero, CursorMode.Auto);
     }

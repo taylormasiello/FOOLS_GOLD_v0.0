@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class GameCursor : MonoBehaviour
 {
-    [SerializeField] Texture2D defaultCursor; // torch for now
-    [SerializeField] Texture2D miningCursor;
+    [SerializeField] Texture2D searchingCursorTexture;
+    [SerializeField] Texture2D miningCursorTexture;
 
-    // Vector2 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //  
+    //Cursor searchingCursor;
+    //Cursor miningCursor;
 
-    private void Start()
+    // Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+
+    void Start()
     {
-        Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+        SetSearchingCursor(searchingCursorTexture);
+    }
+
+    public void SetSearchingCursor(Texture2D texture)
+    {
+        Cursor.SetCursor(searchingCursorTexture, Vector2.zero, CursorMode.Auto);
+    }
+
+    public void SetMiningCursor(Texture2D texture)
+    {
+        Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
     }
 }
