@@ -15,11 +15,26 @@ public class MiningAction : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] CapsuleCollider2D playerCollider;
 
-    [SerializeField] Texture2D testEnterCursor;
+    [SerializeField] Texture2D miningCursor;
     [SerializeField] Texture2D searchingCursor;
+
+    [SerializeField] GameObject gameCursor;
+    [SerializeField] UnityEngine.UI.Button backpackBtn;
 
     //Collision2D playerToMine;
     ContactPoint2D[] playToRockContacts = new ContactPoint2D[2];
+
+    void Start()
+    {
+        backpackBtn.onClick.AddListener(EquipPickaxe);
+        //AddListener(if kenny is touching rock and clicks on rock he is touching --> do things)
+
+    }
+
+    void EquipPickaxe()
+    {
+        gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
+    }
 
     bool CanMineThisRock(Vector3 pos1, Vector3 pos2, Vector3 comp)
     {
@@ -70,7 +85,7 @@ public class MiningAction : MonoBehaviour
             Debug.Log("kenny can mine this rock");
             if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
             {
-                UnityEngine.Cursor.SetCursor(testEnterCursor, Vector2.zero, CursorMode.Auto);
+                UnityEngine.Cursor.SetCursor(miningCursor, Vector2.zero, CursorMode.Auto);
                 
             }
         }
