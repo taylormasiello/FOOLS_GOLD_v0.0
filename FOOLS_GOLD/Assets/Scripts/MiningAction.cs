@@ -19,19 +19,28 @@ public class MiningAction : MonoBehaviour
 
     void Start()
     {
+        SetSearchingCursor(searchingCursor);
         backpackBtn.onClick.AddListener(EquipPickaxe);
 
     }
 
-    void EquipPickaxe()
+    public void SetSearchingCursor(Texture2D texture)
     {
-        gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
+        Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
     }
 
+    public void SetMiningCursor(Texture2D texture)
+    {
+        Cursor.SetCursor(miningCursor, Vector2.zero, CursorMode.Auto);
+    }
 
+    void EquipPickaxe()
+    {
+        SetMiningCursor(miningCursor);
+        /*gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor)*/;
+    }
 
-
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision) 
     {
         if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
         {
