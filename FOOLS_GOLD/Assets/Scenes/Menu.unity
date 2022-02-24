@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &197996879
 RectTransform:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &264184306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -349,7 +349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 12}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &475432856
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Info/How To Play
+  m_text: How To Play
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
@@ -737,7 +737,7 @@ GameObject:
   - component: {fileID: 813629733}
   - component: {fileID: 813629732}
   m_Layer: 5
-  m_Name: InfoTxt
+  m_Name: InfoBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -760,8 +760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.8571, y: -17.8597}
-  m_SizeDelta: {x: 48.863, y: -720.3756}
+  m_AnchoredPosition: {x: -4, y: 6}
+  m_SizeDelta: {x: -97.2461, y: -509.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813629732
 MonoBehaviour:
@@ -836,8 +836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.7141, y: 515.4595}
-  m_SizeDelta: {x: -163.5513, y: -1030.959}
+  m_AnchoredPosition: {x: -2, y: 580}
+  m_SizeDelta: {x: -1101.0798, y: -1160.8331}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &893372665
 MonoBehaviour:
@@ -1256,8 +1256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -517}
-  m_SizeDelta: {x: 604.3706, y: 280.5575}
+  m_AnchoredPosition: {x: 10, y: -555}
+  m_SizeDelta: {x: 588.1365, y: 219.679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233622165
 MonoBehaviour:
@@ -1892,10 +1892,10 @@ RectTransform:
   m_Father: {fileID: 813629731}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -163, y: 73}
+  m_SizeDelta: {x: 2468, y: 888}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1800061449
 MonoBehaviour:
@@ -1917,19 +1917,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Help Kenny Goldenski find rare REAL GOLD, but look out for common FOOL''S
-    GOLD!
-
-
-    Try to find and mine as much gold as you can before time runs out
-
-
-    To
-    move, use ARROW KEYS or WASD
-
-
-    When Kenny finds (touches) gold, use your
-    pickaxe to mine it by pressing SPACEBAR'
+  m_text: "Help Kenny Goldenski find rare REAL GOLD, but look out for common FOOL'S
+    GOLD!\n\nTry to find and mine as much gold as you can before time runs out\n\nTo
+    move, use ARROW KEYS or WASD\n\nWhen Kenny finds (TOUCHES) gold, he'll have to
+    mine it with his pickaxe! \n\nEquip it from (CLICK ON) Kenny's Backpack, then
+    mine (CLICK ON) the gold. It'll return to the backpack on its own."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1992,7 +1984,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 413.8935, y: 142.04968, z: 68.98193, w: -0.00012207031}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
