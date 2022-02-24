@@ -36,9 +36,10 @@ public class MiningAction : MonoBehaviour
         }
         else
         {
-            Debug.Log("Kenny is trying to mine");
+            Debug.Log("kenny smacks rocks");
         }
     }
+
 
 
     // check kenny if is touching rock: rockCompositeCollider2D.IsTouching(playerCapsuleCollider)

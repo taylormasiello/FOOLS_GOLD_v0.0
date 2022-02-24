@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    
 
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] Rigidbody2D rb;
+    [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Animator animator;
+
+    public Vector3 playerWorldPos;
 
     Vector2 movement;
 
@@ -20,7 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        Vector3 playerWorldPos = playerRb.transform.position;
+
+        playerRb.MovePosition(playerRb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 
     void CharMovement()

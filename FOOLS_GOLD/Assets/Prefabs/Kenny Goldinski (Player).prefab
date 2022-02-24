@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 617635695}
   - component: {fileID: 617635698}
   - component: {fileID: 913038060871376743}
+  - component: {fileID: 1339344023}
   m_Layer: 7
   m_Name: Kenny Goldinski (Player)
   m_TagString: Untagged
@@ -140,8 +141,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 9
-  rb: {fileID: 3755289503497198726}
+  playerRb: {fileID: 3755289503497198726}
   animator: {fileID: 1666370725139021246}
+  playerWorldPos: {x: 0, y: 0, z: 0}
 --- !u!70 &617635698
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -176,3 +178,19 @@ MonoBehaviour:
   searchingCursor: {fileID: 2800000, guid: a8b26c47ffc29d5499fe28565e5923c4, type: 3}
   playerCollider: {fileID: 617635698}
   rockCollider: {fileID: 0}
+--- !u!114 &1339344023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666370725139021216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6add1edf480e884f8c8678a0ed360e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemapGrid: {fileID: 0}
+  rockTilemap: {fileID: 0}
+  player: {fileID: 1666370725139021216}
+  playerCollider: {fileID: 617635698}

@@ -1,51 +1,71 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Tilemaps;
-using UnityEngine.UIElements;
+//using System.Collections;
+//using System.Collections.Generic;
+//using UnityEngine;
+//using UnityEngine.Tilemaps;
+//using UnityEngine.UIElements;
 
-public class PickaxeClick : MonoBehaviour
-{
+//public class PickaxeClick : MonoBehaviour
+//{
 
-    [SerializeField] Grid tilemapGrid;
-    [SerializeField] Tilemap rockTilemap;
-    //[SerializeField] Tile rockTile;
+//    [SerializeField] Grid tilemapGrid;
+//    [SerializeField] Tilemap rockTilemap;
+//    [SerializeField] CapsuleCollider2D playerCollider;
+//    [SerializeField] GameObject player;
+//    [SerializeField] ITilemap rockTileInfo;
 
-    [SerializeField] CapsuleCollider2D playerCollider;
+//    TileBase rockTile;
+//    TileData thisRockTile;
 
-    //Vector3Int previousMousePos = new Vector3Int();
 
-    //void Start()
-    //{
-    //    tilemapGrid = gameObject.GetComponent<Grid>();
-    //}
+//    void Update()
+//    {
+//        Vector3Int currentMousePos = GetMousePos();
+//        //rockTile = (Tile)rockTilemap.GetTile(currentMousePos);
 
-    void Update()
-    {
-        Vector3Int mousePos = GetMousePos();
-                
-        if (Input.GetMouseButtonDown(0) && playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
-        {
-            //rockTilemap.DeleteCells(mousePos, 1, 1, 1);
-            Debug.Log(rockTilemap.GetColliderType(mousePos)); // gives "sprite" for rocks, "none" for player & walls
-                                                             // only fires when kenny is touching ANY gold (needs to be THAT gold)
-        }
+//        Collider2D rockCollider = rockTilemap.GetComponent<Collider2D>();
+
+//        Vector2 playerPos = player.transform.position;
+//        //Vector2 rockWorldPos = rockTile.GetTileData(currentMousePos);
+
+//        Vector3Int playerTilePos = rockTilemap.WorldToCell(playerPos);
+
+//        Vector3Int rockTilePos = 
+            
+//        rockTilemap.GetTile<TileBase>(playerTilePos);
+
+//        //if (playerTilePos == rockTilePos)
+//        //{
+
+//        //}
+
+//        public override void GetTileData
+
+//        if (Input.GetMouseButtonDown(0))
+//        {
+//            //rockTilemap.DeleteCells(mousePos, 1, 1, 1);
+//            // gives "sprite" for rocks, "none" for player & walls, only fires when kenny is touching ANY gold (needs to be THAT gold)
+
+//            //this.rockTile.GetTileData(currentMousePos, rockTilemap, thisRockTile);
+//        }
         
-    }
+//    }
 
-    Vector3Int GetMousePos()
-    {
-        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return tilemapGrid.WorldToCell(mouseWorldPos);
-    }
+//    void OnTriggerStay2D(Collider2D collision)
+//    {
+//        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+//        {
+//            return;
+//        }
+//        else
+//        {
+//            Debug.Log("triggerStay");
+//        }
+//    }
 
-    //void GetRockTileCollider()
-    //{
-    //    Vector3Int mousePos = GetMousePos();
+//    Vector3Int GetMousePos()
+//    {
+//        Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+//        return tilemapGrid.WorldToCell(mouseWorldPos);
+//    }
 
-    //    Debug.Log(rockTilemap.GetColliderType(mousePos));
-    //}
-
-
-    // tilemap obj: .DelectCells (instead of Destory.obj ?)
-}
+//}
