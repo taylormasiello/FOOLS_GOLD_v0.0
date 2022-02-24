@@ -9,8 +9,66 @@ using UnityEngine.Tilemaps;
 
 public class TestTrial : MonoBehaviour
 {
+    [SerializeField] GameObject gameCursor;
+    //[SerializeField] UnityEngine.UI.Button backpackBtn;
+
+    [SerializeField] Grid tilemapGrid;
+    [SerializeField] Tilemap rockTilemap;
+
+    //[SerializeField] GameObject player;
+    //[SerializeField] CapsuleCollider2D playerCollider;
+    //[SerializeField] Rigidbody2D playerRb;
+
+    //[SerializeField] Texture2D miningCursor;
+    //[SerializeField] Texture2D searchingCursor;
+
+    //void Start()
+    //{
+    //    backpackBtn.onClick.AddListener(EquipPickaxe); //listen for mousebtndwn on sprite/tile
+    //}
+
+    //void EquipPickaxe()
+    //{
+    //    gameCursor.GetComponent<GameCursor>(); //where to listen (sprite/tile) + what happens on click
+    //}
+
+    void Update()
+    {
+        ClickOnTile();
+    }
+
+    void ClickOnTile()
+    {
+        var mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        var mousePosNoZ = new Vector3(mousePos.x, mousePos.y);
+        Vector3Int mouseTileCell = tilemapGrid.WorldToCell(mousePosNoZ);
+        Debug.Log(mouseTileCell);
+
+        var tileUnderCursor = rockTilemap.GetTile(mouseTileCell);
+        Debug.Log(tileUnderCursor);
+
+        if (Input.GetMouseButtonUp(0)) 
+        {
+            var tileUnderMouse = rockTilemap.GetTile(mouseTileCell); // tracking cursor cell pos real-time
+
+            if (Input.GetMouseButtonDown(0))
+            {
+                Debug.Log("tile click", tileUnderMouse);
+            }
+        }
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
 
 //[SerializeField] Grid tilemapGrid;
 //[SerializeField] Tilemap rockTilemap;
@@ -84,25 +142,25 @@ public class TestTrial : MonoBehaviour
 //    }
 //}
 
-////void Pickaxe()
-////{
-////    //Captures WORLD space for player and cursor
-////    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-////    Vector3 playerPos = player.GetComponent<PlayerMovement>().playerWorldPos;
+////////////////////void Pickaxe()
+////////////////////{
+////////////////////    //Captures WORLD space for player and cursor
+////////////////////    Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+////////////////////    Vector3 playerPos = player.GetComponent<PlayerMovement>().playerWorldPos;
 
-////    //Converts world space click point to tile map click point
-////    Vector3Int mousePosTranslated = rockTilemap.WorldToCell(mousePos);
+////////////////////    //Converts world space click point to tile map click point
+////////////////////    Vector3Int mousePosTranslated = rockTilemap.WorldToCell(mousePos);
 
-////    //Converts player world space to tile map space
-////    Vector3Int playerPosTranslated = rockTilemap.WorldToCell(playerPos);
+////////////////////    //Converts player world space to tile map space
+////////////////////    Vector3Int playerPosTranslated = rockTilemap.WorldToCell(playerPos);
 
-////    //Gives clicked on by cursor tile
-////    TileBase clickedTile = rockTilemap.GetTile<TileBase>(mousePosTranslated);
+////////////////////    //Gives clicked on by cursor tile
+////////////////////    TileBase clickedTile = rockTilemap.GetTile<TileBase>(mousePosTranslated);
 
-////    //Gives touched by Kenny tile
-////    TileBase touchedtile = rockTilemap.GetTile<TileBase>(playerPosTranslated);
+////////////////////    //Gives touched by Kenny tile
+////////////////////    TileBase touchedtile = rockTilemap.GetTile<TileBase>(playerPosTranslated);
 
-////(mousePosTranslated == playerPosTranslated) \\ (clickedTile == touchedtile)
+////////////////////(mousePosTranslated == playerPosTranslated) \\ (clickedTile == touchedtile)
 
 
 

@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class GameCursor : MonoBehaviour
 {
+    [SerializeField] UnityEngine.UI.Button backpackBtn;
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
 
-    // Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
+    //public int btnClickCounter = 0;
+    public bool isPickaxe;
 
     void Start()
     {
         SetSearchingCursor(searchingCursorTexture);
+        isPickaxe = false;
+        backpackBtn.onClick.AddListener(TogglePickaxe);
     }
+
 
     public void SetSearchingCursor(Texture2D texture)
     {
@@ -23,4 +28,21 @@ public class GameCursor : MonoBehaviour
     {
         Cursor.SetCursor(miningCursorTexture, Vector2.zero, CursorMode.Auto);
     }
+
+    public void TogglePickaxe()
+    {
+        if (!isPickaxe)
+        {
+            isPickaxe = true;
+            SetMiningCursor(miningCursorTexture);
+        }
+        else if (isPickaxe)
+        {
+            isPickaxe = false;
+            SetSearchingCursor(searchingCursorTexture);
+        }
+
+
+    }
+
 }

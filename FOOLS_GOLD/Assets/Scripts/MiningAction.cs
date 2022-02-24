@@ -14,6 +14,7 @@ public class MiningAction : MonoBehaviour
 
     [SerializeField] GameObject player;
     [SerializeField] CapsuleCollider2D playerCollider;
+    [SerializeField] Rigidbody2D playerRb;
 
     [SerializeField] Texture2D miningCursor;
     [SerializeField] Texture2D searchingCursor;
@@ -24,17 +25,47 @@ public class MiningAction : MonoBehaviour
     //Collision2D playerToMine;
     ContactPoint2D[] playToRockContacts = new ContactPoint2D[2];
 
-    void Start()
-    {
-        backpackBtn.onClick.AddListener(EquipPickaxe);
-        //AddListener(if kenny is touching rock and clicks on rock he is touching --> do things)
+    //void Start()
+    //{
+    //    backpackBtn.onClick.AddListener(TogglePickaxe);
+    //    //AddListener(if kenny is touching rock and clicks on rock he is touching --> do things)
 
+    //}
+
+    void FixedUpdate()
+    {
+        //Captures WORLD space for player and cursor
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 playerPos = playerRb.transform.position;
+
+        //Converts world space click point to tile map click point
+        Vector3Int mousePosTranslated = rockTilemap.WorldToCell(mousePos);
+
+        //Converts player world space to tile map space
+        Vector3Int playerPosTranslated = rockTilemap.WorldToCell(playerPos);
+
+        //Gives clicked on by cursor tile
+        TileBase clickedTile = rockTilemap.GetTile<TileBase>(mousePosTranslated);
+
+        //Gives touched by Kenny tile
+        TileBase touchedtile = rockTilemap.GetTile<TileBase>(playerPosTranslated);
     }
 
-    void EquipPickaxe()
-    {
-        gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
-    }
+    //void TogglePickaxe()
+    //{
+    //    Texture2D currentCursorTexture2D = gameCursor.GetComponent<GameCursor>().GetComponent<Texture2D>();
+    //    Debug.Log(currentCursorTexture2D);
+
+    //    if (currentCursorTexture2D == searchingCursor)
+    //    {
+    //        gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
+    //    }
+    //    else if (currentCursorTexture2D == miningCursor)
+    //    {
+    //        gameCursor.GetComponent<GameCursor>().SetSearchingCursor(searchingCursor);
+    //    }
+
+    //}
 
     bool CanMineThisRock(Vector3 pos1, Vector3 pos2, Vector3 comp)
     {
@@ -59,43 +90,47 @@ public class MiningAction : MonoBehaviour
         Vector3Int collisionCellPos1 = rockTileGrid.WorldToCell(collsionPt1.point);
         Vector3Int collisionCellPos2 = rockTileGrid.WorldToCell(collisionPt2.point);
 
+
         Vector3 collisionVec3Pos1 = rockTileGrid.WorldToCell(collsionPt1.point);
         Vector3 collisionVec3Pos2 = rockTileGrid.WorldToCell(collisionPt2.point);
         Vector3 maxOffset = new Vector3(2f, 2f, 2f);
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 playerPos = playerRb.transform.position;
+
+        Vector3Int mousePosTranslated = rockTilemap.WorldToCell(mousePos);
+        Vector3Int playerPosTranslated = rockTilemap.WorldToCell(playerPos);
 
         //gets TileBase from collision tile
         TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);   //rock tile kenny collide w/?
         TileBase collisionTile2 = rockTilemap.GetTile(collisionCellPos2);
 
-        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
-        {
-            return;
-        }
-        else if (contactPointsList != null)
-        {
-            //Debug.Log("Kenny is mining");
-            foreach (var contact in playToRockContacts)
-            {
-                Debug.Log(contact.point);
-            }
-        }
+        TileBase clickedTile = rockTilemap.GetTile<TileBase>(mousePosTranslated);
+        TileBase touchedtile = rockTilemap.GetTile<TileBase>(playerPosTranslated);
 
-        if(CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
+        if (CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
         {
             Debug.Log("kenny can mine this rock");
             if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
             {
-                UnityEngine.Cursor.SetCursor(miningCursor, Vector2.zero, CursorMode.Auto);
-                
+                //UnityEngine.Cursor.SetCursor(miningCursor, Vector2.zero, CursorMode.Auto);
+                if (Input.GetMouseButtonDown(0))
+                {
+                    //Debug.Log(string.Format("Coor of cursor is {0} x and {1} y", mousePos.x, mousePos.y));
+                    //Debug.Log(string.Format("Coor of clicked tile is {0} x and {1} y", clickedTile.x, clickedTile.y));
+
+                    //Debug.Log(string.Format("Coor of player is {0} x and {1} y", playerPos.x, playerPos.y));
+                    //Debug.Log(string.Format("Coor of player touched tile is {0} x and {1} y", touchedtile.x, touchedtile.y));
+                }
+
             }
         }
 
-        
 
-            //do
-            //{
-            //    Debug.Log(Input.GetMouseButtonDown(0));
-            //} while (playerToMine.collider.tag == "Rock" && contactPointsList != null);
+
+        //do
+        //{
+        //    Debug.Log(Input.GetMouseButtonDown(0));
+        //} while (playerToMine.collider.tag == "Rock" && contactPointsList != null);
     }
 
     //end mining_Action
@@ -135,13 +170,7 @@ public class MiningAction : MonoBehaviour
             {
                 Debug.Log("kenny can no loger mine this rock");
                 UnityEngine.Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
-            }                
+            }
         }
     }
-
-
-
-
-
-
 }

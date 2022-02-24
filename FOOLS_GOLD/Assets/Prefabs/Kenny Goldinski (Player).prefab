@@ -175,6 +175,7 @@ MonoBehaviour:
   rockTilemap: {fileID: 0}
   player: {fileID: 1666370725139021216}
   playerCollider: {fileID: 617635698}
+  playerRb: {fileID: 3755289503497198726}
   miningCursor: {fileID: 2800000, guid: 9a8884e26e5952340b63c2047fb4d91c, type: 3}
   searchingCursor: {fileID: 2800000, guid: a8b26c47ffc29d5499fe28565e5923c4, type: 3}
   gameCursor: {fileID: 0}
