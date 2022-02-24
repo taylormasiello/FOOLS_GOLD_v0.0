@@ -413,11 +413,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 5
-=======
   m_RootOrder: 6
->>>>>>> parent of 034aeac (cleaned up code)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &83734790
 GameObject:
@@ -582,15 +578,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_RootOrder: 4
-=======
   m_RootOrder: 2
->>>>>>> parent of 034aeac (cleaned up code)
-=======
-  m_RootOrder: 2
->>>>>>> parent of 034aeac (cleaned up code)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &161624412
 MonoBehaviour:
@@ -1004,11 +992,7 @@ RectTransform:
   - {fileID: 1503595237}
   - {fileID: 1050252562}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 6
-=======
   m_RootOrder: 7
->>>>>>> parent of 034aeac (cleaned up code)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2797,34 +2781,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &958102268 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1666370725139021216, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-  m_PrefabInstance: {fileID: 1666370725756609230}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &958102269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 958102268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c880d1da8c208944183024010b51cfc7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameCursor: {fileID: 161624410}
-  backpack: {fileID: 1050252561}
-  miningCursor: {fileID: 2800000, guid: 9a8884e26e5952340b63c2047fb4d91c, type: 3}
-  searchingCursor: {fileID: 2800000, guid: a8b26c47ffc29d5499fe28565e5923c4, type: 3}
-  playerCapsuleCollider: {fileID: 958102270}
-  rockCompositeCollider2D: {fileID: 935884183}
---- !u!70 &958102270 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 617635698, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-  m_PrefabInstance: {fileID: 1666370725756609230}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1050252561
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,11 +2949,7 @@ Transform:
   - {fileID: 1944259445}
   - {fileID: 935884179}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 3
-=======
   m_RootOrder: 4
->>>>>>> parent of 034aeac (cleaned up code)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1383096721
 GameObject:
@@ -3230,11 +3182,7 @@ RectTransform:
   - {fileID: 1796394222}
   - {fileID: 915767276}
   m_Father: {fileID: 0}
-<<<<<<< HEAD
-  m_RootOrder: 7
-=======
   m_RootOrder: 8
->>>>>>> parent of 034aeac (cleaned up code)
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -45689,8 +45637,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-<<<<<<< HEAD
-=======
     - target: {fileID: 958102269, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: backpack
       value: 
@@ -45711,18 +45657,13 @@ PrefabInstance:
       propertyPath: backpackCollider
       value: 
       objectReference: {fileID: 0}
->>>>>>> parent of 034aeac (cleaned up code)
     - target: {fileID: 1666370725139021216, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: m_Name
       value: Kenny Goldinski (Player)
       objectReference: {fileID: 0}
     - target: {fileID: 1666370725139021217, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: m_RootOrder
-<<<<<<< HEAD
-      value: 4
-=======
       value: 5
->>>>>>> parent of 034aeac (cleaned up code)
       objectReference: {fileID: 0}
     - target: {fileID: 1666370725139021217, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: m_LocalPosition.x
