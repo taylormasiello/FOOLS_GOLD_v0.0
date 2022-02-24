@@ -28,9 +28,6 @@ public class MiningAction : MonoBehaviour
         gameCursor.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
     }
 
-
-
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
@@ -42,14 +39,6 @@ public class MiningAction : MonoBehaviour
             Debug.Log("Kenny is trying to mine");
         }
     }
-
-
-
-
-
-
-
-
 
 
     // check kenny if is touching rock: rockCompositeCollider2D.IsTouching(playerCapsuleCollider)
