@@ -760,8 +760,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.1754, y: 20.802002}
-  m_SizeDelta: {x: -154.0667, y: -440.17}
+  m_AnchoredPosition: {x: 0, y: 20.802979}
+  m_SizeDelta: {x: 0, y: -440.17}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &813629732
 MonoBehaviour:
@@ -1922,25 +1922,26 @@ MonoBehaviour:
 
     
 
-    You''ll
-    have to use Kenny''s trusty pickaxe to mind gold when ya''ll find it. He keeps
-    it safe in his backpack, and is sure to return it there when he''s not actively
-    mining.
+    Use
+    Kenny''s trusty pickaxe to mine gold when ya''ll find it. He keeps it stored
+    in his backpack and makes sure to return it there when he''s not actively using
+    it, for safekeeping.
 
     
 
-    ARROW KEYS or WASD     -     Move Kenny
+    ARROW KEYS or WASD   -   Move Kenny
 
-    CLICK on BACKPACK    
-    -     Equip Pickaxe
+    CLICK
+    on BACKPACK   -   Equip Pickaxe
 
-    CLICK on Gold     -     Mine Gold
+    CLICK on GOLD   -   Mine Gold
 
     
 
-    Of course,
-    Kenny can''t mine gold that he can''t reach. He must be ACTIVELY TOUCHING gold
-    in order to EQUIP his pickaxe or MINE that gold.'
+    Ya
+    can''t mine gold that ya can''t reach! Make sure Kenny is ACTIVELY TOUCHING the
+    gold to be mined in order to be able to EQUIP his pickaxe to then MINE that bit
+    o'' gold.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2003,7 +2004,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 109.559814, y: 73.05408, z: 401.7202, w: 20.292694}
+  m_margin: {x: 68.982056, y: 105.522705, z: 365.20044, w: 44.644135}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
