@@ -55,23 +55,14 @@ public class TestTrial : MonoBehaviour
         else if (contactPointsList != null)
         {
             Debug.Log("Kenny is mining");
+            foreach (var contact in playToRockContacts)
+            {
+                Debug.Log(contact.point);
+            }
         }
-
-
-
-        //foreach (var contact in playToRockContacts)
-        //{
-        //    Debug.Log(contact.point); // each elm in arr is a point: (int x, int y)
-        //    // rockTileGrid.WorldToCell(contact.point); // cell coordinates in which collision point is
-        //    TileBase collisionTile = rockTilemap.GetTile(rockTileGrid.WorldToCell(contact.point));
-
-        //}
-
-        //tilemapGrid.WorldToCell(playToRockContacts);
-        //rockTilemap.GetInstantiatedObject();
     }
 
-    private void OnCollisionExit2D(Collision2D playerToMine)
+    void OnCollisionExit2D(Collision2D playerToMine)
     {
         Grid rockTileGrid = rockTilemap.layoutGrid;
         playerToMine.GetContacts(playToRockContacts);
@@ -86,7 +77,8 @@ public class TestTrial : MonoBehaviour
         TileBase collisionTile1 = rockTilemap.GetTile(collisionCellPos1);
         TileBase collisionTile2 = rockTilemap.GetTile(collisionCellPos2);
 
-        if (playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+        // (playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+        if (playerToMine.collider.tag != "Rock") // collision.collider: find the collider of the gameobj your gameobj hits
         {
             return;
         }
@@ -118,6 +110,16 @@ public class TestTrial : MonoBehaviour
 
 
 
+        //foreach (var contact in playToRockContacts)
+        //{
+        //    Debug.Log(contact.point); // each elm in arr is a point: (int x, int y)
+        //    // rockTileGrid.WorldToCell(contact.point); // cell coordinates in which collision point is
+        //    TileBase collisionTile = rockTilemap.GetTile(rockTileGrid.WorldToCell(contact.point));
+
+        //}
+
+        //tilemapGrid.WorldToCell(playToRockContacts);
+        //rockTilemap.GetInstantiatedObject();
 
     }
 }
