@@ -2868,7 +2868,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321795675}
   - component: {fileID: 1321795674}
-  - component: {fileID: 1321795676}
   m_Layer: 0
   m_Name: Tilemap Grid
   m_TagString: Untagged
@@ -2905,32 +2904,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1321795676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321795673}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6add1edf480e884f8c8678a0ed360e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tilemapGrid: {fileID: 1321795674}
-  rockTilemap: {fileID: 935884181}
-  player: {fileID: 1339344021}
-  playerCollider: {fileID: 1339344022}
---- !u!1 &1339344021 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1666370725139021216, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-  m_PrefabInstance: {fileID: 1666370725756609230}
-  m_PrefabAsset: {fileID: 0}
---- !u!70 &1339344022 stripped
-CapsuleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 617635698, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-  m_PrefabInstance: {fileID: 1666370725756609230}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383096721
 GameObject:
   m_ObjectHideFlags: 0
@@ -45617,26 +45590,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1339344023, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: rockTilemap
-      value: 
-      objectReference: {fileID: 935884181}
-    - target: {fileID: 1339344023, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: tilemapGrid
-      value: 
-      objectReference: {fileID: 1321795674}
-    - target: {fileID: 913038060871376743, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: gameCursor
-      value: 
-      objectReference: {fileID: 161624410}
-    - target: {fileID: 913038060871376743, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: backpackBtn
-      value: 
-      objectReference: {fileID: 1446662830}
-    - target: {fileID: 913038060871376743, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: rockCollider
-      value: 
-      objectReference: {fileID: 935884183}
     - target: {fileID: 1666370725139021216, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: m_Name
       value: Kenny Goldinski (Player)
@@ -45685,5 +45638,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4172262924511497314, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: rockTilemap
+      value: 
+      objectReference: {fileID: 935884181}
+    - target: {fileID: 4172262924511497314, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: tilemapGrid
+      value: 
+      objectReference: {fileID: 1321795674}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
