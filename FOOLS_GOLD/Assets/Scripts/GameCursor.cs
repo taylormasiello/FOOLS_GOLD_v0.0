@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.Text;
-using UnityEngine.UI;
 
-public class MouseCursor : MonoBehaviour
+public class GameCursor : MonoBehaviour
 {
     [SerializeField] Texture2D defaultCursor; // torch for now
     [SerializeField] Texture2D miningCursor;
