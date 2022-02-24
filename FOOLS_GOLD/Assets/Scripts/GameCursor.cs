@@ -7,9 +7,6 @@ public class GameCursor : MonoBehaviour
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
 
-    //Cursor searchingCursor;
-    //Cursor miningCursor;
-
     // Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition); 
 
     void Start()
