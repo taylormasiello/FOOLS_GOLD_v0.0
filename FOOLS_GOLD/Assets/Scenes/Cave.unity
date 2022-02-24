@@ -2919,6 +2919,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemapGrid: {fileID: 1321795674}
   rockTilemap: {fileID: 935884181}
+  playerCollider: {fileID: 1339344022}
+--- !u!70 &1339344022 stripped
+CapsuleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 617635698, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+  m_PrefabInstance: {fileID: 1666370725756609230}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383096721
 GameObject:
   m_ObjectHideFlags: 0
@@ -30994,7 +31000,7 @@ GameObject:
   - component: {fileID: 2051885278}
   - component: {fileID: 2051885277}
   - component: {fileID: 2051885276}
-  m_Layer: 6
+  m_Layer: 9
   m_Name: Wall Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
