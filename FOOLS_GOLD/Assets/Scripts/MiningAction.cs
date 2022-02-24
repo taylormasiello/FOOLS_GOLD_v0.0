@@ -15,7 +15,8 @@ public class MiningAction : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] CapsuleCollider2D playerCollider;
 
-    [SerializeField] Texture2D testCursor;
+    [SerializeField] Texture2D testEnterCursor;
+    [SerializeField] Texture2D searchingCursor;
 
     //Collision2D playerToMine;
     ContactPoint2D[] playToRockContacts = new ContactPoint2D[2];
@@ -25,12 +26,8 @@ public class MiningAction : MonoBehaviour
         return System.Math.Abs(pos1.x - pos2.x) <= comp.x && System.Math.Abs(pos1.y - pos2.y) <= comp.y;
     }
 
-    bool CantMineThisRock(Vector3 pos1, Vector3 pos2, Vector3 comp)
-    {
-        return System.Math.Abs(pos1.x - pos2.x) <= comp.x && System.Math.Abs(pos1.y - pos2.y) <= comp.y;
-    }
-
-    void OnCollisionEnter2D(Collision2D playerToMine)   //Kenny goes to mine
+    //start mining_Action
+    void OnCollisionEnter2D(Collision2D playerToMine)
     {
         //makes grid from rocktilemap
         Grid rockTileGrid = rockTilemap.layoutGrid;
@@ -73,7 +70,7 @@ public class MiningAction : MonoBehaviour
             Debug.Log("kenny can mine this rock");
             if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
             {
-                UnityEngine.Cursor.SetCursor(testCursor, Vector2.zero, CursorMode.Auto);
+                UnityEngine.Cursor.SetCursor(testEnterCursor, Vector2.zero, CursorMode.Auto);
                 
             }
         }
@@ -86,8 +83,8 @@ public class MiningAction : MonoBehaviour
             //} while (playerToMine.collider.tag == "Rock" && contactPointsList != null);
     }
 
-
-    void OnCollisionExit2D(Collision2D playerToMine)    //kenny is finished mining
+    //end mining_Action
+    void OnCollisionExit2D(Collision2D playerToMine)
     {
         Grid rockTileGrid = rockTilemap.layoutGrid;
         playerToMine.GetContacts(playToRockContacts);
@@ -116,9 +113,14 @@ public class MiningAction : MonoBehaviour
             //Debug.Log("Kenny is finished mining");
         }
 
+        // switches cursor back from mining (pickaxe) to searching (torch)
         if (CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
         {
-            Debug.Log("kenny can no loger mine this rock");
+            if (playerToMine.collider.tag != "Rock" || contactPointsList != null)
+            {
+                Debug.Log("kenny can no loger mine this rock");
+                UnityEngine.Cursor.SetCursor(searchingCursor, Vector2.zero, CursorMode.Auto);
+            }                
         }
     }
 

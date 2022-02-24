@@ -175,4 +175,5 @@ MonoBehaviour:
   rockTilemap: {fileID: 0}
   player: {fileID: 1666370725139021216}
   playerCollider: {fileID: 617635698}
-  testCursor: {fileID: 2800000, guid: ed02e91ac04c2a84492f2ba36efe2d54, type: 3}
+  testEnterCursor: {fileID: 2800000, guid: ed02e91ac04c2a84492f2ba36efe2d54, type: 3}
+  testExitCursor: {fileID: 2800000, guid: aac3e49cd2e4bbb40892f5a72f43f6dc, type: 3}
