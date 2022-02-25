@@ -82,22 +82,23 @@ public class MiningAction : MonoBehaviour
         TileBase clickedTile = rockTilemap.GetTile<TileBase>(mousePosTranslated);
         TileBase touchedtile = rockTilemap.GetTile<TileBase>(playerPosTranslated);
 
+        if (!playerCollider.IsTouchingLayers(LayerMask.GetMask("Mining")))
+        {
+            Debug.Log("Kenny starts to mine");
+        }
+        else if (contactPointsList != null)
+        {
+            Debug.Log("Kenny can't mine");
+        }
+        
         if (CanMineThisRock(collisionVec3Pos1, collisionVec3Pos2, maxOffset))
         {
-            Debug.Log("kenny can mine this rock");
-            if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
-            {
-                //UnityEngine.Cursor.SetCursor(miningCursor, Vector2.zero, CursorMode.Auto);
-                if (Input.GetMouseButtonDown(0))
+            Debug.Log("kenny can reach this rock");
+
+                if (playerToMine.collider.tag == "Rock" && contactPointsList != null)
                 {
-                    //Debug.Log(string.Format("Coor of cursor is {0} x and {1} y", mousePos.x, mousePos.y));
-                    //Debug.Log(string.Format("Coor of clicked tile is {0} x and {1} y", clickedTile.x, clickedTile.y));
-
-                    //Debug.Log(string.Format("Coor of player is {0} x and {1} y", playerPos.x, playerPos.y));
-                    //Debug.Log(string.Format("Coor of player touched tile is {0} x and {1} y", touchedtile.x, touchedtile.y));
-                }
-
-            }
+                Debug.Log("kenny mines");
+                }            
         }
 
 
@@ -131,11 +132,11 @@ public class MiningAction : MonoBehaviour
         // collision.collider: find the collider of the gameobj your gameobj hits
         if (playerToMine.collider.tag != "Rock")
         {
-            return;
+            Debug.Log("Kenny is finished mining");
         }
         else if (contactPointsList != null)
         {
-            //Debug.Log("Kenny is finished mining");
+            Debug.Log("Kenny no more mine");
         }
     }
 }

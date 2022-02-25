@@ -164,10 +164,10 @@ public class TestTrial : MonoBehaviour
 
     void Update()
     {
-        ClickOnTile();
+        ClickOnRock();
     }
 
-    void ClickOnTile() 
+    void ClickOnRock() 
     {
         var playerPos = playerRb.transform.position;
         var playerPosNoZ = new Vector3(playerPos.x, playerPos.y);
