@@ -5,13 +5,11 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    [SerializeField] EndMenu endMenu;
-    [SerializeField] GameObject hud;
-    [SerializeField] GameManager gameManager;
-    [SerializeField] float timeStart = 5f;
+    [SerializeField] Canvas endMenu;
+    [SerializeField] Canvas hud;
+    [SerializeField] float gameTime = 30f;
 
     public float timeLeft;
-    public bool gameOver;
     Image gameTimer;
 
     void Awake()
@@ -20,33 +18,29 @@ public class GameTimer : MonoBehaviour
     }
 
     void Start()
-    {
-        StartTimer();
+    {        
+        timeLeft = gameTime;
     }
 
     void Update()
     {
-        RunningTimer();
+        Timer();
     }
 
-    public void StartTimer()
-    {
-        timeLeft = timeStart;
-        gameOver = false;
-    }
-
-
-    public void RunningTimer()
+    public void Timer()
     {
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
-            gameTimer.fillAmount = timeLeft / timeStart;
+            gameTimer.fillAmount = timeLeft / gameTime;
         }
         else
         {
             Time.timeScale = 0;
-            gameOver = true;
+            hud.enabled = false;
+            endMenu.enabled = true;
+            
+
         }
     }
 }

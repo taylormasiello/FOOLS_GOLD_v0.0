@@ -12,16 +12,7 @@ public class TitleMenu : MonoBehaviour
 
     public void PlayBtn()
     {
-        if (SceneManager.GetActiveScene().buildIndex - 1 >= 0)
-        {
-            SceneManager.LoadSceneAsync(1);
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);            
-        }
-        else
-        {
-            SceneManager.LoadSceneAsync(1);
-        }
-        
+        SceneManager.LoadScene(1);
     }
 
     public void QuitBtn()
