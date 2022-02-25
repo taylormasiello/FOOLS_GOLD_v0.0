@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     GameTimer timer;
     EndMenu endMenu;
 
@@ -28,6 +29,19 @@ public class GameManager : MonoBehaviour
             // endScreen.ShowFinalScore(); PH for final score onto endScreen
         }
 
+=======
+    [SerializeField] Canvas endMenu;
+    [SerializeField] Canvas hud;
+
+    void Start()
+    {
+        endMenu.enabled = false;
+        hud.enabled = true;
+    }
+
+    void Update()
+    {   
+>>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
         EscApp();
     }
 

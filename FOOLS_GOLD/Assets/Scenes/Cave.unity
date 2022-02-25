@@ -1089,7 +1089,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85401c5f7d18be4f98df52336d8b107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   endScreen: {fileID: 0}
+=======
+  endMenu: {fileID: 0}
+  hud: {fileID: 0}
+>>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
   gameTime: 30
   timeLeft: 0
 --- !u!1 &248998924
@@ -1484,6 +1489,25 @@ Transform:
   m_Father: {fileID: 1503595237}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &666077174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666077172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d85401c5f7d18be4f98df52336d8b107, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endMenu: {fileID: 1394196551}
+  hud: {fileID: 217647708}
+  gameTime: 2
+  timeLeft: 0
+>>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
 --- !u!1 &690614001
 GameObject:
   m_ObjectHideFlags: 0
@@ -45700,6 +45724,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9703c50597612354f97df7c564afdbee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+  endMenu: {fileID: 1394196551}
+  hud: {fileID: 217647708}
+>>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
 --- !u!1001 &1666370725756609230
 PrefabInstance:
   m_ObjectHideFlags: 0
