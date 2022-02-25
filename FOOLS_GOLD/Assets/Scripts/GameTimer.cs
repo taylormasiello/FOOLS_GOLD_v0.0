@@ -5,16 +5,15 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
-    [SerializeField] Canvas endMenu;
-    [SerializeField] Canvas hud;
+    [SerializeField] GameObject endScreen;   
     [SerializeField] float gameTime = 30f;
-
     public float timeLeft;
     Image gameTimer;
 
     void Awake()
     {
-        gameTimer = GameObject.Find("GameTimer_Image").GetComponent<Image>();
+        //endScreen = GameObject.Find("EndMenu").GetComponent<Canvas>();
+        gameTimer = GetComponent<Image>();
     }
 
     void Start()
@@ -24,11 +23,6 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
-        Timer();
-    }
-
-    public void Timer()
-    {
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
@@ -36,11 +30,9 @@ public class GameTimer : MonoBehaviour
         }
         else
         {
+            // timesUpText.SetActive(true);
             Time.timeScale = 0;
-            hud.enabled = false;
-            endMenu.enabled = true;
-            
-
+            // PUT ENDSCREEN TRANSITION HERE (JUST MAKE IT VISIBLE AND GAME INVISIBLE)
         }
     }
 }

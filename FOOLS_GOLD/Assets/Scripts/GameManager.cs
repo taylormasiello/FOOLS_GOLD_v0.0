@@ -5,17 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Canvas endMenu;
-    [SerializeField] Canvas hud;
+    GameTimer timer;
+    EndMenu endMenu;
+
+    void Awake()
+    {
+        endMenu = FindObjectOfType<EndMenu>();
+        timer = FindObjectOfType<GameTimer>();
+    }
 
     void Start()
     {
+
         endMenu.enabled = false;
-        hud.enabled = true;
     }
 
     void Update()
-    {   
+    {        
+        if (timer.timeLeft == 0)
+        {
+            endMenu.enabled = true;
+            // endScreen.ShowFinalScore(); PH for final score onto endScreen
+        }
+
         EscApp();
     }
 
