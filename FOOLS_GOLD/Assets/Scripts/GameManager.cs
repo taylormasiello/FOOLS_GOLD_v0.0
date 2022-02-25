@@ -5,23 +5,52 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] Canvas endMenu;
+    [SerializeField] EndMenu endMenu;
     [SerializeField] Canvas hud;
+    [SerializeField] GameTimer gameTimer;
+
+    void Awake()
+    {
+       endMenu = FindObjectOfType<EndMenu>();
+       hud = GameObject.Find("HUD").GetComponent<Canvas>();
+    }
 
     void Start()
     {
-        endMenu.enabled = false;
-        hud.enabled = true;
+        hud.gameObject.SetActive(true);
+        endMenu.gameObject.SetActive(false);        
     }
 
     void Update()
-    {   
+    {
         EscApp();
+        EndScreen();
     }
 
-    public void OnReplyLevel()
+    public void EndScreen()
     {
-        SceneManager.LoadScene(0); 
+        if (gameTimer.gameOver)
+        {
+            hud.gameObject.SetActive(false);
+            endMenu.gameObject.SetActive(true);
+            //endMenu.ShowFinalScore();
+        }
+    }
+
+    public void ReplyLevel()
+    {
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+        gameTimer.StartTimer();
+
+        // ***FIX REPLAY TIMER BUG** froze on replay 
+
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
+    }
+
+    public void TitleMenu()
+    {
+        SceneManager.LoadSceneAsync(0);
+        //SceneManager.UnloadSceneAsync(1, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
     }
 
     public void QuitBtn()
