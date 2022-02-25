@@ -45660,5 +45660,13 @@ PrefabInstance:
       propertyPath: tilemapGrid
       value: 
       objectReference: {fileID: 1321795674}
+    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: rockTilemap
+      value: 
+      objectReference: {fileID: 935884181}
+    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: tilemapGrid
+      value: 
+      objectReference: {fileID: 1321795674}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}

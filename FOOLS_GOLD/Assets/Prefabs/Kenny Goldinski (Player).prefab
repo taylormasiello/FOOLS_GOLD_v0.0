@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 617635698}
   - component: {fileID: 4172262924511497314}
   - component: {fileID: 514977220}
+  - component: {fileID: 7057775530729337083}
   m_Layer: 7
   m_Name: Kenny Goldinski (Player)
   m_TagString: Untagged
@@ -188,6 +189,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a6add1edf480e884f8c8678a0ed360e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemapGrid: {fileID: 0}
+  rockTilemap: {fileID: 0}
+  playerRb: {fileID: 3755289503497198726}
+--- !u!114 &7057775530729337083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666370725139021216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93d945a17ae2b8e4cbd8065da50462d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tilemapGrid: {fileID: 0}
