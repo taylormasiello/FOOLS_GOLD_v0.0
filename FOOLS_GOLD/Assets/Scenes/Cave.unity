@@ -1090,11 +1090,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
   endScreen: {fileID: 0}
 =======
   endMenu: {fileID: 0}
   hud: {fileID: 0}
 >>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
+=======
+  endScreen: {fileID: 0}
+>>>>>>> parent of 99afccf (functional game timer implemented)
   gameTime: 30
   timeLeft: 0
 --- !u!1 &248998924
@@ -1490,6 +1494,7 @@ Transform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 --- !u!114 &666077174
 MonoBehaviour:
@@ -1508,6 +1513,8 @@ MonoBehaviour:
   gameTime: 2
   timeLeft: 0
 >>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
+=======
+>>>>>>> parent of 99afccf (functional game timer implemented)
 --- !u!1 &690614001
 GameObject:
   m_ObjectHideFlags: 0
@@ -45725,10 +45732,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   endMenu: {fileID: 1394196551}
   hud: {fileID: 217647708}
 >>>>>>> parent of 47c6855 (bug fixes; all good except replay timer bug still NEEDS to be fixed;;)
+=======
+>>>>>>> parent of 99afccf (functional game timer implemented)
 --- !u!1001 &1666370725756609230
 PrefabInstance:
   m_ObjectHideFlags: 0

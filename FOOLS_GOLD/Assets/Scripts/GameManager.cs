@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+<<<<<<< HEAD
     [SerializeField] EndMenu endMenu;
     [SerializeField] Canvas hud;
     [SerializeField] GameTimer gameTimer;
@@ -13,16 +14,40 @@ public class GameManager : MonoBehaviour
     {
        endMenu = FindObjectOfType<EndMenu>();
        hud = GameObject.Find("HUD").GetComponent<Canvas>();
+=======
+    GameTimer timer;
+    EndMenu endMenu;
+
+    void Awake()
+    {
+        endMenu = FindObjectOfType<EndMenu>();
+        timer = FindObjectOfType<GameTimer>();
+>>>>>>> parent of 99afccf (functional game timer implemented)
     }
 
     void Start()
     {
+<<<<<<< HEAD
         hud.gameObject.SetActive(true);
         endMenu.gameObject.SetActive(false);        
     }
 
     void Update()
     {
+=======
+
+        endMenu.enabled = false;
+    }
+
+    void Update()
+    {        
+        if (timer.timeLeft == 0)
+        {
+            endMenu.enabled = true;
+            // endScreen.ShowFinalScore(); PH for final score onto endScreen
+        }
+
+>>>>>>> parent of 99afccf (functional game timer implemented)
         EscApp();
         EndScreen();
     }

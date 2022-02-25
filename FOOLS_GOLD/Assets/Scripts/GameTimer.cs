@@ -5,18 +5,24 @@ using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour
 {
+<<<<<<< HEAD
     [SerializeField] EndMenu endMenu;
     [SerializeField] GameObject hud;
     [SerializeField] GameManager gameManager;
     [SerializeField] float timeStart = 5f;
 
+=======
+    [SerializeField] GameObject endScreen;   
+    [SerializeField] float gameTime = 30f;
+>>>>>>> parent of 99afccf (functional game timer implemented)
     public float timeLeft;
     public bool gameOver;
     Image gameTimer;
 
     void Awake()
     {
-        gameTimer = GameObject.Find("GameTimer_Image").GetComponent<Image>();
+        //endScreen = GameObject.Find("EndMenu").GetComponent<Canvas>();
+        gameTimer = GetComponent<Image>();
     }
 
     void Start()
@@ -26,6 +32,7 @@ public class GameTimer : MonoBehaviour
 
     void Update()
     {
+<<<<<<< HEAD
         RunningTimer();
     }
 
@@ -38,6 +45,8 @@ public class GameTimer : MonoBehaviour
 
     public void RunningTimer()
     {
+=======
+>>>>>>> parent of 99afccf (functional game timer implemented)
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
@@ -45,8 +54,13 @@ public class GameTimer : MonoBehaviour
         }
         else
         {
+            // timesUpText.SetActive(true);
             Time.timeScale = 0;
+<<<<<<< HEAD
             gameOver = true;
+=======
+            // PUT ENDSCREEN TRANSITION HERE (JUST MAKE IT VISIBLE AND GAME INVISIBLE)
+>>>>>>> parent of 99afccf (functional game timer implemented)
         }
     }
 }
