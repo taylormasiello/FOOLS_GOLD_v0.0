@@ -48,7 +48,7 @@ public class TestyTest : MonoBehaviour
         ClickOnRock(); 
     }
 
-    bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // use in ClickOnRock(); compares cursor pos world & player pos world; must be near to be able to click
+    bool PlayerInOffset(Vector3 pos1, Vector3 pos2, Vector3 offset) // compares cursor pos world & player pos world to offset
     {
         return System.Math.Abs(pos1.x - pos2.x) <= offset.x && System.Math.Abs(pos1.y - pos2.y) <= offset.y;
     }
@@ -69,7 +69,7 @@ public class TestyTest : MonoBehaviour
         Vector3Int mouseTileCell = tilemapGrid.WorldToCell(mousePosNoZ); // cursor pos real time, cell** 
         TileBase tileUnderCursor = rockTilemap.GetTile(mouseTileCell); // Rock under cursor
         
-        Debug.Log("\n tile under cursor: ", tileUnderCursor); // shows like a vector2 (3 w/o z), but can't be cast
+        // Debug.Log("\n tile under cursor: ", tileUnderCursor); shows like a vector2 (3 w/o z), but can't be cast
 
         
 
@@ -78,12 +78,13 @@ public class TestyTest : MonoBehaviour
 
         Vector3Int playerTileCell = tilemapGrid.WorldToCell(playerPosNoZ); //player pos real time, cell **
         TileBase tileUnderPlayer = rockTilemap.GetTile(playerTileCell); //tile under player
-        Debug.Log("\n tile under player: ", tileUnderPlayer);
+        
+        // Debug.Log("\n tile under player: ", tileUnderPlayer);
 
-        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && gC.isPickaxe == true) // add tileUnderCursor and tileUnderPlayer conditional
+        if (PlayerInOffset(mousePosNoZ, playerPosNoZ, maxOffset) && ComparedTilesInOffset(mouseTileCell, playerTileCell, maxOffset) && gC.isPickaxe == true) // add tileUnderCursor and tileUnderPlayer conditional
         {
             
-            if (Input.GetMouseButton(0))
+            if (Input.GetMouseButtonDown(0))
             {
                 //placeholder; write "MiningAction" script to combine/attach to this "ToMine" script
                 Debug.Log("Kenny Can Mine!");
