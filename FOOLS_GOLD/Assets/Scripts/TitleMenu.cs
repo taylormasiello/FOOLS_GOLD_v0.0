@@ -15,7 +15,7 @@ public class TitleMenu : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex - 1 >= 0)
         {
             SceneManager.LoadSceneAsync(1);
-            //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);            
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);            
         }
         else
         {
