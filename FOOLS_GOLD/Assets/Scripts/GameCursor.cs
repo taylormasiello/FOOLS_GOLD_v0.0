@@ -17,7 +17,6 @@ public class GameCursor : MonoBehaviour
         backpackBtn.onClick.AddListener(TogglePickaxe);
     }
 
-
     public void SetSearchingCursor(Texture2D texture)
     {
         Cursor.SetCursor(searchingCursorTexture, Vector2.zero, CursorMode.Auto);
@@ -40,8 +39,5 @@ public class GameCursor : MonoBehaviour
             isPickaxe = false;
             SetSearchingCursor(searchingCursorTexture);
         }
-
-
     }
-
 }
