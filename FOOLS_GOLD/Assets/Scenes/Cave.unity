@@ -45592,6 +45592,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 514977220, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: gameCursor
+      value: 
+      objectReference: {fileID: 161624412}
+    - target: {fileID: 514977220, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: rockTilemap
+      value: 
+      objectReference: {fileID: 935884181}
+    - target: {fileID: 514977220, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
+      propertyPath: tilemapGrid
+      value: 
+      objectReference: {fileID: 1321795674}
     - target: {fileID: 1666370725139021216, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
       propertyPath: m_Name
       value: Kenny Goldinski (Player)
@@ -45640,29 +45652,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: gC
-      value: 
-      objectReference: {fileID: 161624412}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: maxOffset.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: maxOffset.y
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: maxOffset.z
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: rockTilemap
-      value: 
-      objectReference: {fileID: 935884181}
-    - target: {fileID: 7057775530729337083, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
-      propertyPath: tilemapGrid
-      value: 
-      objectReference: {fileID: 1321795674}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e5abae2ce3143489b2242edcad1af6, type: 3}
