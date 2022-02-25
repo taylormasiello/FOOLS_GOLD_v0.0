@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf01907663d844baa912939c4d8d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 9
+  moveSpeed: 8.5
   playerRb: {fileID: 3755289503497198726}
   animator: {fileID: 1666370725139021246}
   playerWorldPos: {x: 0, y: 0, z: 0}
@@ -175,4 +175,4 @@ MonoBehaviour:
   rockTilemap: {fileID: 0}
   playerRb: {fileID: 3755289503497198726}
   gameCursor: {fileID: 0}
-  maxOffset: {x: 2, y: 2, z: 2}
+  maxOffset: {x: 1.5, y: 1.5, z: 1.5}
