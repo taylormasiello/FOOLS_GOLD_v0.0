@@ -12,9 +12,7 @@ public class TitleMenu : MonoBehaviour
 
     public void PlayBtn()
     {
-        SceneManager.LoadScene("Cave");
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load next scene
+        SceneManager.LoadScene(1);
     }
 
     public void QuitBtn()

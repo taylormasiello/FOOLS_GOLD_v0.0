@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
-{
-    
-
+{  
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] Rigidbody2D playerRb;
     [SerializeField] Animator animator;
@@ -16,9 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        CharMovement();
-        EscApp();
-        
+        CharMovement();        
     }
 
     void FixedUpdate()
@@ -36,13 +32,5 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
-    }
-
-    void EscApp()
-    {
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
     }
 }
