@@ -7,7 +7,6 @@ public class GameCursor : MonoBehaviour
     [SerializeField] UnityEngine.UI.Button backpackBtn;
     [SerializeField] Texture2D searchingCursorTexture;
     [SerializeField] Texture2D miningCursorTexture;
-
     public bool isPickaxe;
 
     void Start()

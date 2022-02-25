@@ -209,3 +209,5 @@ MonoBehaviour:
   tilemapGrid: {fileID: 0}
   rockTilemap: {fileID: 0}
   playerRb: {fileID: 3755289503497198726}
+  gC: {fileID: 0}
+  maxOffset: {x: 2, y: 2, z: 2}

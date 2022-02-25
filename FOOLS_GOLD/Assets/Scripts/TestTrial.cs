@@ -9,6 +9,9 @@ using UnityEngine.Tilemaps;
 
 public class TestTrial : MonoBehaviour
 {
+    // gameCursorObject.GetComponent<GameCursor>().SetMiningCursor(miningCursor);
+
+
     //[SerializeField] GameObject gameCursor;
     //[SerializeField] Grid tilemapGrid;
     //[SerializeField] Tilemap rockTilemap;
