@@ -1,6 +1,8 @@
 ## FOOL'S GOLD version 0.0 
 
-### This version of FOOL'S GOLD sadly became corrupted due to an issue w/ Unity's metadata and GitHub version control. FOOL'S GOLD is being REMADE (version 1.0) in a new repo. (ADD LINK)
+### This version of FOOL'S GOLD sadly became corrupted due to an issue w/ Unity's metadata and GitHub version control. 
+
+FOOL'S GOLD is being REMADE (version 1.0) in a new repo. (ADD LINK)
 
 Please check out my devlog on FOOL'S GOLD for more information:
 
