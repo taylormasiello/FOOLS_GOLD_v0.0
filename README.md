@@ -1,4 +1,4 @@
-# FOOL'S GOLD version 0.0 
+# FOOL'S GOLD version 0.0 - (CORRUTPED)
 
 ### This version of FOOL'S GOLD sadly became corrupted due to an issue w/ Unity's metadata and GitHub version control. 
 
