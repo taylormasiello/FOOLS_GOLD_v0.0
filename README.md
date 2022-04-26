@@ -2,7 +2,9 @@
 
 ### This version of FOOL'S GOLD sadly became corrupted due to an issue w/ Unity's metadata and GitHub version control. 
 
-## FOOL'S GOLD is being REMADE (version 1.0) in a new repo: https://github.com/taylormasiello/FOOLS_GOLD_v1.0
+## FOOL'S GOLD has been REMADE (version 1.0) in a new repo: https://github.com/taylormasiello/FOOLS_GOLD_v1.0
+
+## FOOL'S GOLD Demo has been fully released and is playable in browser or available for download here: https://taayakin.itch.io/fools-gold-demo
 
 Please check out my devlog on FOOL'S GOLD for more information: https://taayakinsfirstgamejam.blogspot.com/
 
